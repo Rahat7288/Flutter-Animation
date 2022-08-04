@@ -7,10 +7,17 @@ class Home extends StatefulWidget{
 }
 
 class HomeState extends State<Home> with TickerProviderStateMixin{
+  /*
+  * animation and animation controler to control the animation part for different elements
+  * */
   late Animation<double>    catAnimation;
   late AnimationController  catController;
   late Animation<double>    boxAnimation;
   late AnimationController  boxControler;
+
+  /*
+  * initState control the whole animation controler,
+  * */
 
   initState(){
     super.initState();
@@ -59,7 +66,10 @@ class HomeState extends State<Home> with TickerProviderStateMixin{
 
   }
 
-
+/*
+*
+* main widget for the boday
+* */
 
   Widget build(context){
     return Scaffold(
@@ -88,6 +98,9 @@ class HomeState extends State<Home> with TickerProviderStateMixin{
     );
 
   }
+  /*
+  * animation builder for cat  image
+  * */
   Widget buildCatAnimation(){
     return AnimatedBuilder(
         animation: catAnimation,
